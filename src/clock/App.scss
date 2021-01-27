@@ -1,0 +1,50 @@
+*{
+    padding:0;
+    margin:0;
+
+}
+/*
+main{
+    height: 220px;
+    width:250px;
+    color:white;
+    display: inline-block;
+    background-color:  #FB8966;
+    margin: 40px;
+}*/
+   
+    .clock{
+        position: relative;
+        height: 220px;
+        width:250px;
+        color:white;
+        display: inline-block;
+        background-color:  #FB8966;
+        margin: 40px;
+        display: flex;
+        justify-content: center;
+        .clock-position{
+            position: absolute;
+            bottom:20px;
+            .clock-time_colon{
+                margin-top: 12px;
+            }
+            .clock-time{
+                bottom: 20px;
+                background-color: #E67F5F;
+                color:white;
+                height: 45px;
+                width: 50px;
+                margin: 40px;
+                h1{
+                    font-size: 33px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+        
+                }
+            }
+        }
+    }
+
+

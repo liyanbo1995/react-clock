@@ -1,0 +1,61 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/*
+main{
+    height: 220px;
+    width:250px;
+    color:white;
+    display: inline-block;
+    background-color:  #FB8966;
+    margin: 40px;
+}*/
+.clock {
+  position: relative;
+  height: 220px;
+  width: 250px;
+  color: white;
+  display: inline-block;
+  background-color: #FB8966;
+  margin: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.clock .clock-position {
+  position: absolute;
+  bottom: 20px;
+}
+
+.clock .clock-position .clock-time_colon {
+  margin-top: 12px;
+}
+
+.clock .clock-position .clock-time {
+  bottom: 20px;
+  background-color: #E67F5F;
+  color: white;
+  height: 45px;
+  width: 50px;
+  margin: 40px;
+}
+
+.clock .clock-position .clock-time h1 {
+  font-size: 33px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=App.css.map */
