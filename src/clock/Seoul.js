@@ -35,55 +35,8 @@ class Clock extends Component {
         clearInterval(this.intervalId)
     }
 
-    getWeekDate() {
-        var d = new Date();
-        var weekday = new Array(7);
-        weekday[0] = "Sun";
-        weekday[1] = "Mon";
-        weekday[2] = "Tue";
-        weekday[3] = "Wed";
-        weekday[4] = "Thu";
-        weekday[5] = "Fri";
-        weekday[6] = "Sat";
-        var n = weekday[d.getDay()];
-        return n;
-      }
 
-    getMonth(){
-        var p = new Date();
-        var monthName = {
-            "01":"Jan",
-            "02":"Feb",
-            "03":"Mar",
-            "04":"Apr",
-            "05":"May",
-            "06":"Jun",
-            "07":"Jul",
-            "08":"Aug",
-            "09":"Sep",
-            "10":"Oct",
-            "11":"Nov",
-            "12":"Dec",
-        };
-        var m = p.toLocaleDateString();
-        var q = m.substring(3, 5);
-        var month = monthName[q];
-        return month;
-    }
-    getYear(){
-        var d = new Date();
-        var q = d.toLocaleDateString();
-        var year = q.substring(6,10);
-        return year;
-    }
-    getDate(){
-        var d = new Date();
-        var q = d.toLocaleDateString();
-        var date = q.substring(0,2);
-        return date;
-    }
-    
-    render() {
+        render() {
         //console.log('lifecycle 2')
         const { time } = this.state
         const str = time.toLocaleTimeString()
@@ -96,18 +49,9 @@ class Clock extends Component {
         const date = this.getDate()
         
         var moment = require('moment-timezone');
-        var text= moment().tz("Asia/Seoul").toString();
-        console.log(text)//首尔时间 明天直接抄
+        var text= moment().tz("Korea/Seoul").toString();
+        console.log(text)
 
-        var moment = require('moment-timezone');
-        var text= moment().tz("Europe/London").toString();
-        console.log(text)//伦敦时间 明天直接抄
-
-        var moment = require('moment-timezone');
-        var text= moment().tz("America/New_York").toString();
-        console.log(text)//纽约时间 明天直接抄
-
-        //明天放两个function将字符串分割即可 然后jsx写法可以参考之前的 写了一个剩下的就好写了
         
         return (
             <main>
@@ -148,4 +92,4 @@ class Clock extends Component {
     }
 }
 
-export default Clock
+export default Seoul

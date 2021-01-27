@@ -28,6 +28,19 @@ main{
           justify-content: center;
 }
 
+.clock .clock-date {
+  padding-top: 10px;
+  padding-left: 57px;
+  height: 40px;
+  width: 250px;
+  background-color: #E67F5F;
+  text-align: center;
+}
+
+.clock .clock-date h1 {
+  font-size: 18px;
+}
+
 .clock .clock-position {
   position: absolute;
   bottom: 20px;

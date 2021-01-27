@@ -23,6 +23,18 @@ main{
         margin: 40px;
         display: flex;
         justify-content: center;
+        .clock-date{
+            padding-top:10px;
+            padding-left:57px;
+            height:40px;
+            width:250px;
+            background-color:  #E67F5F;
+            text-align: center;
+            h1{
+                
+                font-size: 18px;
+            }
+        }
         .clock-position{
             position: absolute;
             bottom:20px;
