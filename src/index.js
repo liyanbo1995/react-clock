@@ -5,7 +5,10 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import "bootstrap/dist/css/bootstrap.min.css";
 import Carddesign from './card/CardUI';
+import Seoul from './clock/Seoul'
 import Clock from "./clock/Clock";
+//import Clock_old from "./clock/Clock_old";
+
 
  
 ReactDOM.render(

@@ -3,7 +3,8 @@ import '../clock/App.css'
 import "bootstrap/dist/css/bootstrap.min.css"
 import {Row,Col,Container} from "react-bootstrap";
 
-class Clock extends Component {
+
+class Seoul extends Component {
     constructor() {
         super()
         this.state = {
@@ -36,6 +37,20 @@ class Clock extends Component {
     }
 
 
+    getDate(){
+        var moment = require('moment-timezone');
+        var seoul= moment().tz("Asia/Seoul").toString();
+        var seoulDate = seoul.substring(0,15)
+        return seoulDate
+    }
+    getTime(){
+        var moment = require('moment-timezone');
+        var seoul= moment().tz("Asia/Seoul").toString();
+        var seoulTime = seoul.substring(16,25)
+        return seoulTime
+    }
+
+
         render() {
         //console.log('lifecycle 2')
         const { time } = this.state
@@ -43,48 +58,28 @@ class Clock extends Component {
         //console.log(strDate.substring(3, 5))//打印出月份
         //const weekday = this.gettingDate()
         //console.log(weekday)
-        const month = this.getMonth()
-        const weekDate = this.getWeekDate() 
-        const year = this.getYear()
-        const date = this.getDate()
+       // const month = this.getMonth()
+        //const weekDate = this.getWeekDate() 
+       // const year = this.getYear()
+       // const date = this.getDate()
         
-        var moment = require('moment-timezone');
-        var text= moment().tz("Korea/Seoul").toString();
-        console.log(text)
 
         
         return (
             <main>
-                <h1>Brisbane</h1>
+                <h1 className="title-Seoul">Seoul</h1>
                 <Container className="clock">
-                <Row className="clock-date">
-                    <h1>{weekDate} {month} {date} {year}</h1>
-                </Row>
-                <Row className="clock-position">
-                    <Row>
-                        <Col className="clock-time">
-                            <h1>{ str.substring(0, 2) }</h1>
-                        </Col>
+                    <Row className="clock-date">
+                        <h1>{this.getDate()}</h1>
                     </Row>
-                    <Row>
-                        <h1 className="clock-time_colon">:</h1>
+                    <Row className="clock-position">
+                        <h1>{this.getTime()}</h1>
+                        <div></div>
                     </Row>
-                    <Row>
-                        <Col className="clock-time">
-                            <h1>{ str.substring(3, 5) }</h1>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <h1 className="clock-time_colon">:</h1>
-                    </Row>
-                    <Row>
-                        <Col className="clock-time">
-                            <h1>{ str.substring(6, 8) }</h1>
-                        </Col>
-                </Row>
-            </Row>
-        </Container>
-    </main>
+                </Container>
+               
+                
+            </main>
             
          
 

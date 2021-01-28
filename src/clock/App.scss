@@ -3,18 +3,21 @@
     margin:0;
 
 }
-/*
-main{
-    height: 220px;
-    width:250px;
-    color:white;
-    display: inline-block;
-    background-color:  #FB8966;
-    margin: 40px;
-}*/
-   
+    .title-Sydeny{
+        margin:40px 40px 20px 95px;
+    }
+    
+    .title-Seoul{
+        margin:40px 40px 20px 110px;
+    }
+    .title-London{
+        margin:40px 40px 20px 95px;
+    }
+    .title-Newyork{
+        margin:40px 40px 20px 80px;
+    }
     .clock{
-        position: relative;
+        position:relative;
         height: 220px;
         width:250px;
         color:white;
@@ -28,7 +31,7 @@ main{
             padding-left:57px;
             height:40px;
             width:250px;
-            background-color:  #E67F5F;
+            background-color: #E67F5F;
             text-align: center;
             h1{
                 
@@ -38,23 +41,13 @@ main{
         .clock-position{
             position: absolute;
             bottom:20px;
-            .clock-time_colon{
-                margin-top: 12px;
-            }
-            .clock-time{
-                bottom: 20px;
-                background-color: #E67F5F;
-                color:white;
-                height: 45px;
-                width: 50px;
-                margin: 40px;
-                h1{
-                    font-size: 33px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-        
-                }
+            h1{
+                margin: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 60px;
+    
             }
         }
     }

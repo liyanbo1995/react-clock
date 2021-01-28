@@ -2,9 +2,8 @@ import React, { Component } from 'react'
 import '../clock/App.css'
 import "bootstrap/dist/css/bootstrap.min.css"
 import {Row,Col,Container} from "react-bootstrap";
-import Clock from './Sydney';
 
-class New_York extends Component {
+class Sydeny extends Component {
     constructor() {
         super()
         this.state = {
@@ -39,13 +38,13 @@ class New_York extends Component {
 
     getDate(){
         var moment = require('moment-timezone');
-        var seoul= moment().tz("America/New_York").toString();
+        var seoul= moment().tz("Australia/Sydney").toString();
         var seoulDate = seoul.substring(0,15)
         return seoulDate
     }
     getTime(){
         var moment = require('moment-timezone');
-        var seoul= moment().tz("America/New_York").toString();
+        var seoul= moment().tz("Australia/Sydney").toString();
         var seoulTime = seoul.substring(16,25)
         return seoulTime
     }
@@ -67,7 +66,7 @@ class New_York extends Component {
         
         return (
             <main>
-                <h1 className="title-Newyork">New York</h1>
+                <h1 className="title-Sydeny">Sydeny</h1>
                 <Container className="clock">
                     <Row className="clock-date">
                         <h1>{this.getDate()}</h1>
@@ -86,6 +85,4 @@ class New_York extends Component {
     }
 }
 
-export default New_York
-
-
+export default Sydeny
